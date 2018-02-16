@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@android:sans-serif-medium"
+                android:gravity="center"
+                android:text="Team A"
+                android:textColor="#616161"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/team_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@android:sans-serif-light"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="36sp" />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="getPointA"
+                android:text="得分" />
+
+            <TextView
+                android:id="@+id/team_a_warning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@android:sans-serif-light"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#F44336"
+                android:textSize="36sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="warningA"
+                android:text="红黄牌" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@android:sans-serif-medium"
+                android:gravity="center"
+                android:text="犯规队员号码"
+                android:textColor="#616161"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/wrongA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@android:sans-serif-light"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@android:sans-serif-medium"
+                android:gravity="center"
+                android:text="Team B"
+                android:textColor="#616161"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/team_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@android:sans-serif-light"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="36sp" />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="getPointB"
+                android:text="得分" />
+
+            <TextView
+                android:id="@+id/team_b_warning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@android:sans-serif-light"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#F44336"
+                android:textSize="36sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="warningB"
+                android:text="红黄牌" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@android:sans-serif-medium"
+                android:gravity="center"
+                android:text="犯规队员号码"
+                android:textColor="#616161"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/wrongB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@android:sans-serif-light"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="500dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@android:color/darker_gray" />
+
+    <View
+        android:layout_width="500dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp"
+        android:background="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="reset"
+        android:text="reset" />
+
+    <RelativeLayout
+        android:id="@+id/keyboard"
+        android:layout_width="120dp"
+        android:layout_height="180dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#FFECB3">
+
+        <Button
+            android:id="@+id/zero"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="type0"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/one"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_above="@id/zero"
+            android:layout_toLeftOf="@id/two"
+            android:onClick="type1"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/two"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_above="@id/zero"
+            android:layout_centerHorizontal="true"
+            android:onClick="type2"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/three"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_above="@id/zero"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/two"
+            android:onClick="type3"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/four"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_above="@id/one"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@id/five"
+            android:onClick="type4"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/five"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_above="@id/two"
+            android:layout_centerHorizontal="true"
+            android:onClick="type5"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/six"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_above="@id/three"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/five"
+            android:onClick="type6"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/seven"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_above="@id/four"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@id/eight"
+            android:onClick="type7"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/eight"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_above="@id/five"
+            android:layout_centerHorizontal="true"
+            android:onClick="type8"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/nine"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_above="@id/six"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/eight"
+            android:onClick="type9"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_above="@id/eight"
+            android:layout_centerHorizontal="true"
+            android:onClick="cancel"
+            android:text="cancel" />
+
+        <Button
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/zero"
+            android:onClick="memberA"
+            android:text="A" />
+
+        <Button
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/zero"
+            android:onClick="memberB"
+            android:text="B" />
+
+    </RelativeLayout>
+</RelativeLayout>
